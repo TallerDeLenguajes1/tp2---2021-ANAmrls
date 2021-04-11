@@ -4,8 +4,20 @@ Trabajo Práctico N° 2
 
 Punto 2f
 
-Después de utilizar el comando git checkout para saltar a la línea master, en la 
+Después de utilizar el comando "git checkout" para saltar a la línea master, en la 
 carpeta del repositorio no se observa el archivo tp2_1_2.c. Esto se debe a que el 
 archivo fue creado en una rama diferente; y al cambiar de rama, los archivos del 
 directorio de trabajo se actualizan para reflejar la versión almacenada en esa 
 rama en particular.
+
+Punto 2h y 2i
+
+El comando "gitk --all" abre una interfaz grafica, donde se puede observar el 
+conjunto de ramas interconectadas y podemos seleccionar cada una para ver su estado.
+
+Punto 2j
+
+Después de unificar las ramas utilizando el comando "git merge", por un lado se observa 
+en el gráfico de las ramas que se creó un conector entre las 2 ramas; y por otro lado, 
+al seleccionar ahora la rama master se puede ver el archivo tp2_1_2.c creado en 
+Opcion_2, este cambio también se observa en el Explorador de Archivos de Windows.
