@@ -1,0 +1,11 @@
+Taller de Lenguajes I – 2021
+Programador Universitario / Licenciatura en informática
+Trabajo Práctico N° 2
+
+Punto 2f
+
+Después de utilizar el comando git checkout para saltar a la línea master, en la 
+carpeta del repositorio no se observa el archivo tp2_1_2.c. Esto se debe a que el 
+archivo fue creado en una rama diferente; y al cambiar de rama, los archivos del 
+directorio de trabajo se actualizan para reflejar la versión almacenada en esa 
+rama en particular.
