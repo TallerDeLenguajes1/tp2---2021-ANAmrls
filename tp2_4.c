@@ -9,6 +9,7 @@ typedef struct {
     char *tipo_cpu;
 } compu;
 
+compu retornarPC(compu pc, char *tipos);
 void cargarCompus(compu *caracteristicas, char *tipos, int num_pc);
 void mostrarCompus(compu *caracteristicas, int num_pc);
 void masVieja(compu *caracteristicas, int num_pc);
@@ -18,7 +19,15 @@ int main () {
     char tipos[6][10] = {"Intel", "AMD", "Celeron", "Athlon", "Core", "Pentium"};
     char *p_tipos = &tipos[0][0];
     int num_pc;
-    compu *caracteristicas;
+    compu *caracteristicas, pc;
+
+    pc = retornarPC(pc, p_tipos);
+    puts("Caracteristicas de la PC:");
+    printf("Velocidad: %d GHz\n", pc.velocidad);
+    printf("Anio: %d\n", pc.year);
+    printf("Nucleos: %d\n", pc.cantidad);
+    printf("Tipo de procesador: ");
+    puts(pc.tipo_cpu);
 
     puts("Ingrese la cantidad de PCs a cargar: ");
     scanf("%d", &num_pc);
@@ -34,6 +43,19 @@ int main () {
     getchar();
 
     return 0;
+}
+
+//Función que recibe una estructura vacía como argumento y carga sus características
+compu retornarPC(compu pc, char *tipos) {
+    int aux;
+
+    pc.velocidad = 1 + rand() % 3;
+    pc.year = 2000 + rand() % 18;
+    pc.cantidad = 1 + rand() % 4;
+    aux = rand() % 6;
+    pc.tipo_cpu = tipos+aux*10;
+
+    return pc;
 }
 
 /*Función que recibe el puntero al arreglo de estructuras y carga el mismo
